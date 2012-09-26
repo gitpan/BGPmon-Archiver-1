@@ -38,6 +38,10 @@ use DateTime::Format::ISO8601;
 use DateTime;
 use Net::SMTP;
 
+BEGIN{
+	our $VERSION = 1.01;
+};
+
 my $prog_name = $0;
 
 $! = 1;
