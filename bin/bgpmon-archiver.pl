@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-$VERSION = 1.01;
+$VERSION = 1.02;
 # *
 # *
 # *      Copyright (c) 2012 Colorado State University

@@ -39,7 +39,7 @@ use DateTime;
 use Net::SMTP;
 
 BEGIN{
-	our $VERSION = 1.01;
+	our $VERSION = 1.02;
 };
 
 my $prog_name = $0;
@@ -275,9 +275,7 @@ sub restart_archiver {
     # continue trying until we get the archiver started
     while (1) {
         `sudo /etc/init.d/bgpmon-archiver start`;
-        print "$?\n";
         if ($?) {
-        print "Here\n";
         # if the startup script failed, no need to wait and see if successfully started.   just set time out and that will drop us to end of loop.
             $time = $timeout;
         } else {
