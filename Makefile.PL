@@ -4,11 +4,10 @@ use ExtUtils::MakeMaker;
 # the contents of the Makefile that is written.
 #
 
-my @exec_files = qw(bin/bgpmon-archiver.pl);
+my @exec_files = qw(bin/bgpmon-archiver.pl bin/bgpmon-archiver-status.pl);
 
 WriteMakefile(
     NAME              => 'bgpmon-archiver',
-#    VERSION_FROM      => 'lib/BGPmon/Log.pm', # finds $VERSION
     PREREQ_PM         => {'Test'        =>  0,
 			  'BGPmon::Log' => 0,
 			  'BGPmon::Fetch' => 0,
@@ -17,6 +16,7 @@ WriteMakefile(
 			  'File::Path' => 0,
 			  'POSIX' => 0,
 			  'Getopt::Long' => 0,
+			  'Net::SMTP' => 0,
 			 }, # e.g., Module::Name => 1.1
     EXE_FILES		=> \@exec_files,
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
