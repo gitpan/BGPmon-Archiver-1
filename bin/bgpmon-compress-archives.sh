@@ -1,5 +1,5 @@
 #!/bin/bash
-$VERSION = 1.03;
+$VERSION = 1.04;
 
 # *
 # *
